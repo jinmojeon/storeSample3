@@ -1,0 +1,18 @@
+- 소스 수정 내역
+Order > Order.java 35line : Application -> OrderApplication
+
+MyPage > MyPageViewHandler > 모든 OrderStatus메소드 > orderCancelled -> orderCancelled.getOrderStatus()로 변경
+
+Pasy > PayService > 11라인 http://localhost:8082로 변경(향후 yaml로 변경)
+
+- 테스트 URL
+- 조회
+http POST http://localhost:8081/orders
+http POST http://localhost:8082/pays
+http POST http://localhost:8083/deliveries
+http POST http://localhost:8084/myPages
+- gateway
+http POST http://localhost:8088/orders
+- order 등록
+http POST http://localhost:8081/orders customerId="customer1" customerName="홍길동1" productId="prd1" productName="prdName1" qty=10 amount=1000 orderStatus="A" address="ABC"
+
