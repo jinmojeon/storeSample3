@@ -36,7 +36,7 @@
    1. 결재 취소 시 교재 배송이 진행되지 않는다 → Sync 호출
 2. 장애격리
    1. 배송에서 장애가 발생해도 결재와 신청은 가능해야 한다 →Async(event-driven), Eventual Consistency
-   1. 결재가 과부화 되면 결재를 잠시 후 처리하도록 유도한다 → Circuit breaker, fallback
+   1. 결재가 과부화되면 결재를 잠시 후 처리하도록 유도한다 → Circuit breaker, fallback
 3. 성능
    1. 수강생이 교재 신청상태를 신청 내역 조회에서 확인할 수 있어야 한다 → CQRS
 
